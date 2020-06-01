@@ -1,0 +1,14 @@
+rm -r ./Firmwares/Zyxel/ftp.zyxel.com/*/mib_file
+rm -r ./Firmwares/Zyxel/ftp.zyxel.com/*/3g_dongle_document
+rm -r ./Firmwares/Zyxel/ftp.zyxel.com/*/certification
+rm -r ./Firmwares/Zyxel/ftp.zyxel.com/*/cli_reference_guide
+rm -r ./Firmwares/Zyxel/ftp.zyxel.com/*/datasheet
+rm -r ./Firmwares/Zyxel/ftp.zyxel.com/*/declaration
+rm -r ./Firmwares/Zyxel/ftp.zyxel.com/*/handbook
+rm -r ./Firmwares/Zyxel/ftp.zyxel.com/*/product_icon
+rm -r ./Firmwares/Zyxel/ftp.zyxel.com/*/quick_start_guide
+rm -r ./Firmwares/Zyxel/ftp.zyxel.com/*/user_guide
+rm -r ./Firmwares/Zyxel/ftp.zyxel.com/*/driver
+rm -r ./Firmwares/Zyxel/ftp.zyxel.com/*/software
+
+

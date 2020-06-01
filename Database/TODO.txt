@@ -1,0 +1,25 @@
+try to remove firmadyne user and rebuild in Dockerfile
+
+
+
+
+docker run -it -p 5432:5432 --name persistent_db testdatabase
+
+ docker start persistent_db
+
+
+change schema add tar_extracted column to table image - done
+
+
+set tar_extracted field in extraction.py script   -> done
+            try:
+                cur = self.database.cursor()
+                cur.execute("UPDATE image SET tar_extracted='True' WHERE id=%s", (self.tag, )) #get id from extraction folder
+                self.database.commit()
+            except BaseException:
+                ret = False
+                traceback.print_exc()
+                self.database.rollback()
+            finally:
+                if cur:
+                    cur.close()

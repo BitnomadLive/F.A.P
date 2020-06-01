@@ -1,0 +1,26 @@
+add stuff from FAT setup.py to change python2 -> python3    -> done
+add extraction of tar.gz to extract.sh   -> done
+
+# Change interpretor in extractor.py to python3
+sed -i 's/env python/env python3/' ./sources/extractor/extractor.py   -> done
+
+
+-b for brand
+-sql with sql ip 172.17.0.1
+remove -no because we want parallel extraction   -> doesnt work correctly dont do it
+
+
+
+tar needs to be installed
+
+
+
+
+change dockerfile so that 
+    RECURSION_BREADTH = 5
+    RECURSION_DEPTH = 3
+is set to higher numbers
+
+
+
+dynamically set memory based on number of parallel virtualisations

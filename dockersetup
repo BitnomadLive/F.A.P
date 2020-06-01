@@ -1,0 +1,12 @@
+# create network
+docker network create foo
+docker run -d --network=foo --name my-db redis ...
+docker run    --network=foo python-redis-py ...
+
+das oben hat nicht funktioniert
+
+
+
+Persistente DB (IP 172.17.0.1)
+docker run -it -p 5432:5432 --name persistent_db testdatabase
+

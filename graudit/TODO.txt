@@ -1,0 +1,11 @@
+./graudit -d all_signatures -L -c 0-z -x *.ko,*.so,*.so.*   "/home/thesis2020/Thesis/F.A.P1/Firmwares/Zyxel/ftp.zyxel.com/AMG1302-T10B/firmware/AMG1302-T10B_2.00(AAJC.15)C0_tar_extracted"
+
+Change sql schema to have iamge id instead of objectid - duplicate entries are okay for now
+
+create dockerfile
+
+
+cat *.db> all_signatures.db
+
+
+maybe just output graudit output into a file  -> write script to populate db later?

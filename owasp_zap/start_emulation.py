@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import pexpect
+import re
 
 sudo_pass = "firmadyne"
 
@@ -30,8 +31,10 @@ interfaces = child.readline().strip().decode("utf8")
 print ("[+] Network interfaces:", interfaces)
 child.expect_exact(pexpect.EOF)
 
+IP = re.search(r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}', interfaces).group()
+
 if len(interfaces) > 1:
-    print("Network Interface: ", interfaces)
+    print("IP: ", IP)
     #TODO update database wih interface status
 else:
     print("TODO: Add routine to shutdown docker container and update DB")

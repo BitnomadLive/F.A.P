@@ -25,6 +25,9 @@ RUN ./firmware-analysis-toolkit/setup.sh
 #Copy emulation python script
 COPY start_emulation.py /zap/firmadyne/start_emulation.py
 
+#Copy owasp scan python script
+COPY zap_scan.py /zap/firmadyne/zap_scan.py
+
 #install pexpect python module
 #RUN sudo pip install pexpect
 

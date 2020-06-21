@@ -3,10 +3,10 @@ outdir = "/home/thesis2020/Thesis/F.A.P1/Firmwares/netgear/WNAP/WNAP320"
 
 
 
-tar2db_docker_cmd= 'docker run -it --privileged -v "' + str(outdir) + '":/zap/firmadyne/images:ro -v "' +str(outdir) + "_report"  + '":/zap/firmadyne/scratch owasp_container_test '
+owasp_zap_docker_cmd= 'docker run -it -p 8080:8080 --privileged -v "' + str(outdir) + '":/zap/firmadyne/images:ro -v "' +str(outdir) + "_report"  + '":/zap/firmadyne/scratch owasp_container_test '
 
-print(tar2db_docker_cmd)
-subprocess.check_call(tar2db_docker_cmd, shell=True)
+print(owasp_zap_docker_cmd)
+subprocess.check_call(owasp_zap_docker_cmd, shell=True)
 
 
 #sollte jetzt alles ohne arch machbar sein da sql geupdated wurde
@@ -21,3 +21,13 @@ subprocess.check_call(tar2db_docker_cmd, shell=True)
 #firmadyne@0d8eba8d5127:/zap/firmadyne$ ./scratch/126/run.sh
 #delete echo "firmadyne" | sudo -SE rm -r /scratch/126/image 
 #delete echo "firmadyne" | sudo -SE /scratch/126/image.raw
+
+
+
+
+#sudo ./zap-x.sh -daemon -host 0.0.0.0 -port 8080 -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true -config api.disablekey=true
+
+
+#get all http request
+#/JSON/core/view/sites/?zapapiformat=JSON&formMethod=GET
+
